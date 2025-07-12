@@ -1,4 +1,4 @@
-// Last updated: 7/12/2025, 12:05:57 PM
+// Last updated: 7/12/2025, 12:06:50 PM
 class Solution {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
@@ -7,9 +7,7 @@ class Solution {
         pair[']'] = '[';
         pair['}'] = '{';
 
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
-
+        for (char c : s.toCharArray()) {
             if (c == '(' || c == '[' || c == '{') {
                 stack.push(c);
             }
