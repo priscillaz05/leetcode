@@ -1,4 +1,4 @@
-// Last updated: 7/12/2025, 12:05:09 PM
+// Last updated: 7/12/2025, 12:05:57 PM
 class Solution {
     public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
@@ -15,10 +15,9 @@ class Solution {
             }
 
             if (c == ')' || c == ']' || c == '}') {
-                if (!stack.isEmpty()) {
-                    char match = stack.pop();
-                    if (match != pair[c]) return false;
-                } else return false;
+                if (stack.isEmpty()) return false;
+                char match = stack.pop();
+                if (match != pair[c]) return false;
             }
         }
 
