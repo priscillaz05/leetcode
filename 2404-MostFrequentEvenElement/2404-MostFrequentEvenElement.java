@@ -1,7 +1,7 @@
-// Last updated: 8/7/2025, 10:56:31 AM
+// Last updated: 8/7/2025, 10:57:11 AM
 class Solution {
     public int mostFrequentEven(int[] nums) {
-        if (nums.length == 1) return nums[0]%2 == 0? nums[0]:-1;
+        if (nums.length == 1) return nums[0] % 2 == 0 ? nums[0] : -1;
         HashMap<Integer, Integer> map = new HashMap<>();
 
         int curMaxCnt = 0;
